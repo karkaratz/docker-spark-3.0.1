@@ -1,6 +1,5 @@
 # docker-spark-3.0.1
 This Project contains the Dockerfile(s) to istantiate a Standalone Spark 3.0.1 cluster (No YARN no Hadoop).<BR>
-I Used as starting point this <a href="https://medium.com/@marcovillarreal_40011/creating-a-spark-standalone-cluster-with-docker-and-docker-compose-ba9d743a157f">tutorial</a>
 <BR>
 <pre>  spark-base/     contains the setup of the main image with scala 2.12.4, spark 3.0.1, Python 3.5.2, pyspark, sparkshell.<BR>
   spark-master/   contains the setup of the spark master node<BR>
@@ -9,7 +8,7 @@ I Used as starting point this <a href="https://medium.com/@marcovillarreal_40011
   
   spark-composer/ contains the yaml fine to istantiate a cluster (1 master, 4 workers. All nodes with 1 core and 1 GB od RAM)and create a dedicated network.
 </pre>
-
+I used as starting point this <a href="https://medium.com/@marcovillarreal_40011/creating-a-spark-standalone-cluster-with-docker-and-docker-compose-ba9d743a157f">tutorial</a>
 
 # Preliminary Information
 You need to have a working version of docker and docker-compose.<br>
