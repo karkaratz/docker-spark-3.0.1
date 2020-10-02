@@ -1,4 +1,4 @@
-FROM karkaratz:spark-base
+FROM karkaratz/spark_3_0_1:spark-base
 
 COPY start-worker.sh /
 
