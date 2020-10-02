@@ -16,8 +16,7 @@ $YOURTAG, in the commands below,should be something like repository:image_name. 
 You need a machine with at least 8G of RAM to run the cluster with 5 nodes. Otherwise you can lower the number of nodes in docker-compose.yml.
   
 # If you want to skip the Build phase and Just Run the Cluster
-Just download the spark-composer folder, cd into it and run:
-<pre>docker-compose up</pre>
+Jump to START THE CLUSTER. The docker-compose.yml is configured to gather the images that are already available in docker.io
 
 # Images generation
 The following build operations will require an internet connection and the download of other related images, the first step will take few minutes.
