@@ -12,11 +12,11 @@ This Project contains the Dockerfile(s) to istantiate a Standalone Spark 3.0.1 c
 
 # Preliminary Information
 You need to have a working version of docker and docker-compose.<br>
-$YOURTAG, in the commands below,should be something like repository:image_name. As an example, the base image I published on docker.io is karkaratz/spark_3_0_1:spark-base <BR>
+$YOURTAG, in the commands below,should be something like repository:image_name. As an example, the base image I published on Docker Hub is karkaratz/spark_3_0_1:spark-base <BR>
 You need a machine with at least 8G of RAM to run the cluster with 5 nodes. Otherwise you can lower the number of nodes in docker-compose.yml.
   
 # If you want to skip the Build phase and Just Run the Cluster
-Jump to START THE CLUSTER. The docker-compose.yml is configured to gather the images that are already available in docker.io
+Jump to START THE CLUSTER. The docker-compose.yml is configured to gather the images that are already available in Docker Hub.
 
 # Images generation
 The following build operations will require an internet connection and the download of other related images, the first step will take few minutes.
@@ -27,7 +27,7 @@ docker image build  --tag $YOURTAG:spark-master ./spark-master/   # Generates Sp
 
 docker image build  --tag $YOURTAG:spark-worker ./spark-worker/   # Generates Spark Worker image
 
-docker image build  --tag $YOURTAG:spark-submit ./spark-submit/   # Generates Spark Submite image
+docker image build  --tag $YOURTAG:spark-submit ./spark-submit/   # Generates Spark Submit image
 </pre>
 
 Now it's time to check that images have been created.
@@ -43,7 +43,7 @@ karkaratz/spark_3_0_1   spark-base          415d9d7beab6        14 hours ago    
 </pre>
 
 # Edit docker-compose.yml
-You need to edit the spark-composer/docker-compose.yml file in order to substitute karkaratz/spark_3_0_1 with $YOURTAG (The tag you selected earlier).
+You need to edit the spark-composer/docker-compose.yml file in order to substitute karkaratz/spark_3_0_1 with $YOURTAG (The tag you selected earlier) otherwise the cluster would be starteed with images that are already created in Docker Hub.
 
 # Start the cluster
 
