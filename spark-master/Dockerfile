@@ -1,4 +1,4 @@
-FROM karkaratz/vforciniti:spark-base
+FROM karkaratz/spark_3_0_1:spark-base
 
 COPY start-master.sh /
 
