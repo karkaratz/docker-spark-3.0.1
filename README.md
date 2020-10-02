@@ -13,10 +13,10 @@ This Project contains the Dockerfile(s) to istantiate a Standalone Spark 3.0.1 c
 # Preliminary Information
 You need to have a working version of docker and docker-compose.<br>
 $YOURTAG, in the commands below,should be something like repository:image_name. As an example, the base image I published on docker.io is karkaratz/spark_3_0_1:spark-base <BR>
-You need a machine with at leas 8G of RAM to run the cluster with 5 nodes. Otherwise you can lower the number of nodes in docker-compose.yml.
+You need a machine with at least 8G of RAM to run the cluster with 5 nodes. Otherwise you can lower the number of nodes in docker-compose.yml.
   
-# If you want to skip the Build and Just Run the Cluster
-Just doanload the spark-composer folder, cd into it and run:
+# If you want to skip the Build phase and Just Run the Cluster
+Just download the spark-composer folder, cd into it and run:
 <pre>docker-compose up</pre>
 
 # Images generation
@@ -31,7 +31,7 @@ docker image build  --tag $YOURTAG:spark-worker ./spark-worker/   # Generates Sp
 docker image build  --tag $YOURTAG:spark-submit ./spark-submit/   # Generates Spark Submite image
 </pre>
 
-Now it's time to check that images have been create.
+Now it's time to check that images have been created.
 <pre>docker images</pre>
 
 You should see something similar to the following:
