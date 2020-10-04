@@ -6,7 +6,7 @@ This Project contains the Dockerfile(s) to istantiate a Standalone Spark 3.0.1 c
   spark-worker/   contains the setup of a spark worker node that can join the spark cluster using the spark master<BR>
   spark-submit/   contains the setup of a node that can submit jobs in the cluster (using pyspark, sparkshell or spark-submit)<BR>
   
-  spark-composer/ contains the yaml fine to istantiate a cluster (1 master, 4 workers. All nodes with 1 core and 1 GB od RAM)and create a dedicated network.
+  spark-composer/ contains the yaml file to istantiate a cluster (1 master, 4 workers. All nodes with 1 core and 1 GB od RAM)and create a dedicated network.
 </pre>
 
 # Credits
