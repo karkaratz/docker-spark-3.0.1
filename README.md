@@ -91,4 +91,4 @@ SparkSession available as 'spark'.
 Go back to https://10.5.0.2:8080/ and refresh<br>
 You should see the worker nodes and the running Pyspark shell application.
 
-If you want to change CORE, RAM and OTHER parameters chenge the configuration in the shell file: spark-composer/env/spark-worker.sh
+If you want to change CORE, RAM and OTHER parameters change the configuration in the shell file: spark-composer/env/spark-worker.sh
